@@ -1,7 +1,147 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-);
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  width: 100%;
+  background: #020617;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+}
+
+.logo span {
+  color: cyan;
+}
+
+/* NAV */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 100px;
+  flex-wrap: wrap;
+}
+
+.hero-img img {
+  width: 250px;
+  border-radius: 50%;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-15px);}
+  100% {transform: translateY(0);}
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: cyan;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* ICON */
+.card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* SOCIAL */
+.social a {
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    height: 100vh;
+    width: 70%;
+    background: #020617;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
