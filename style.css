@@ -10,10 +10,12 @@ body {
   color: white;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 15px 30px;
   background: #020617;
 }
 
@@ -27,10 +29,15 @@ nav a:hover {
   color: cyan;
 }
 
+/* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.hero h2 {
+  font-size: 40px;
 }
 
 .hero span {
@@ -44,13 +51,16 @@ button {
   background: cyan;
   color: black;
   cursor: pointer;
+  border-radius: 5px;
 }
 
+/* SECTIONS */
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
+/* GRID */
 .grid {
   display: flex;
   justify-content: center;
@@ -58,20 +68,58 @@ section {
   flex-wrap: wrap;
 }
 
+/* CARD */
 .card {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
-  width: 200px;
+  width: 250px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   background: #020617;
+}
+
+/* 🔥 RESPONSIVE DESIGN */
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Laptop */
+@media (min-width: 901px) {
+  .card {
+    width: 250px;
+  }
 }
