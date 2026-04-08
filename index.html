@@ -1,91 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul Raj Portfolio</title>
 
-<title>Gokulraj | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-
-<!-- ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- Navbar -->
 <header>
-  <nav class="navbar container">
-    <h2 class="logo">Gokul<span>.dev</span></h2>
+    <h2 class="logo">Gokul Raj</h2>
 
-    <ul class="nav-menu" id="nav-menu">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div id="menu">
+        <i class="fas fa-bars"></i>
     </div>
-  </nav>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Hi, I'm Gokulraj 👋</h1>
-    <h2>Frontend Developer</h2>
-    <p>I build modern, responsive websites.</p>
-  </div>
+<!-- Hero Section -->
+<section id="home" class="home">
+    <div class="content">
+        <h1>Hello, I'm <span>Gokul Raj</span></h1>
+        <p>Front-End Developer</p>
+        <button>Hire Me</button>
+    </div>
 
-  <div class="hero-img">
-    <img src="/gokulraj.jpg" alt="profile">
-  </div>
+    <div class="image">
+        <img src="/gokulraj.jpg" alt="Gokulraj">
+    </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>I am passionate web developer skilled in HTML, CSS, JavaScript.</p>
+<!-- About -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a B.Sc Computer Technology graduate passionate about web development.
+        Skilled in HTML, CSS, and JavaScript. I love creating responsive and user-friendly websites.
+    </p>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Skills</h2>
+<!-- Education -->
+<section id="education" class="education">
+    <h2>Education</h2>
 
-  <div class="grid">
-    <div class="card"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
-    <div class="card"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
-    <div class="card"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
-  </div>
+    <div class="edu-box">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>B.Sc Computer Technology</h3>
+        <p>Kongu Arts and Science College</p>
+    </div>
+
+    <div class="edu-box">
+        <i class="fas fa-school"></i>
+        <h3>HSC</h3>
+        <p>Sengunthar Higher Secondary School</p>
+    </div>
+
 </section>
 
-<!-- PROJECT -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <div class="card">Portfolio Website</div>
-    <div class="card">Billing System</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-
-  <div class="social">
-    <a href="#"><i class="fa-brands fa-github"></i></a>
-    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="#"><i class="fa-solid fa-envelope"></i></a>
-  </div>
+<!-- Contact -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-phone"></i> 8072407738</p>
+    <p><i class="fas fa-envelope"></i> gokul@email.com</p>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
