@@ -18,7 +18,14 @@ header {
   padding: 15px 30px;
   background: #020617;
 }
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #020617;
+  position: relative;
+}
 nav a {
   margin: 0 10px;
   color: white;
@@ -128,6 +135,9 @@ footer {
   display: none;
   font-size: 28px;
   cursor: pointer;
+  position: absolute;
+  right: 20px;   /* 👉 RIGHT SIDE */
+  top: 15px;
 }
 
 /* NORMAL NAV */
@@ -153,16 +163,7 @@ nav {
     text-align: center;
   }
 
-  nav a {
-    padding: 10px;
-    display: block;
-  }
-
   nav.active {
     display: flex;
-  }
-
-  header {
-    position: relative;
   }
 }
