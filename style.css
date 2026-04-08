@@ -123,3 +123,46 @@ footer {
     width: 250px;
   }
 }
+/* MENU ICON */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* NORMAL NAV */
+nav {
+  display: flex;
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #020617;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 10px;
+    display: block;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    position: relative;
+  }
+}
