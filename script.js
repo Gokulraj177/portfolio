@@ -1,17 +1,23 @@
 const menu = document.getElementById("menu");
 const nav = document.getElementById("nav");
+const toggle = document.getElementById("toggle");
 
-// MENU TOGGLE
+// MENU
 menu.onclick = () => {
   nav.classList.toggle("active");
 };
 
-// CLOSE MENU WHEN CLICK LINK
+// CLOSE MENU
 document.querySelectorAll("nav a").forEach(link => {
   link.onclick = () => {
     nav.classList.remove("active");
   };
 });
+
+// DARK MODE
+toggle.onclick = () => {
+  document.body.classList.toggle("light");
+};
 
 // TYPING EFFECT
 const text = ["Frontend Developer", "Web Designer"];
@@ -37,6 +43,7 @@ function type() {
       i = (i + 1) % text.length;
     }
   }
+
   setTimeout(type, isDeleting ? 50 : 100);
 }
 

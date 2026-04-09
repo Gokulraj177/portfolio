@@ -1,8 +1,12 @@
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,7 +39,7 @@ nav a {
   text-decoration: none;
 }
 
-/* MENU ICON */
+/* MENU */
 #menu {
   display: none;
   font-size: 22px;
@@ -51,9 +55,18 @@ nav a {
   flex-wrap: wrap;
 }
 
+.home h1 {
+  white-space: nowrap;
+}
+
+#typing {
+  min-height: 30px;
+  display: inline-block;
+}
+
 .image img {
   width: 250px;
-  border-radius: 50%;
+  border-radius: 55%;
   animation: float 3s infinite;
 }
 
@@ -92,6 +105,33 @@ section {
 .css {width: 80%;}
 .js {width: 70%;}
 
+/* EDUCATION COLORS */
+.degree {
+  color: cyan;
+}
+
+.institute {
+  color: lightgray;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: white;
+  color: black;
+}
+
+body.light header {
+  background: #ddd;
+}
+
+body.light .card {
+  background: #f1f1f1;
+}
+
+body.light nav a {
+  color: black;
+}
+
 /* MOBILE */
 @media(max-width:768px){
 
@@ -116,5 +156,9 @@ section {
   .home {
     flex-direction: column;
     text-align: center;
+  }
+
+  .home h1 {
+    white-space: normal;
   }
 }
