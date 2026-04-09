@@ -1,31 +1,43 @@
-// Menu
 const menu = document.getElementById("menu");
 const nav = document.getElementById("nav");
 
-menu.onclick = () => nav.classList.toggle("active");
-
-// Dark Mode
-const toggle = document.getElementById("toggle");
-
-toggle.onclick = () => {
-document.body.classList.toggle("light");
+// MENU TOGGLE
+menu.onclick = () => {
+  nav.classList.toggle("active");
 };
 
-// Typing
-const text = ["Front-End Developer","Web Designer"];
-let i=0,j=0,current="",del=false;
+// CLOSE MENU WHEN CLICK LINK
+document.querySelectorAll("nav a").forEach(link => {
+  link.onclick = () => {
+    nav.classList.remove("active");
+  };
+});
 
-function type(){
-current=text[i];
+// TYPING EFFECT
+const text = ["Frontend Developer", "Web Designer"];
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
 
-if(del){j--;}else{j++;}
+function type() {
+  current = text[i];
 
-document.getElementById("typing").textContent=current.substring(0,j);
-
-if(!del && j==current.length){del=true;setTimeout(type,1000);return;}
-if(del && j==0){del=false;i=(i+1)%text.length;}
-
-setTimeout(type,del?50:100);
+  if (!isDeleting) {
+    document.getElementById("typing").textContent = current.substring(0, j++);
+    if (j > current.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    }
+  } else {
+    document.getElementById("typing").textContent = current.substring(0, j--);
+    if (j < 0) {
+      isDeleting = false;
+      i = (i + 1) % text.length;
+    }
+  }
+  setTimeout(type, isDeleting ? 50 : 100);
 }
 
 type();
