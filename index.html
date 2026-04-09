@@ -1,79 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gokul Raj Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokul Raj Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-
-<!-- Navbar -->
+    
 <header>
-    <h2 class="logo">Gokul Raj</h2>
+<h2 class="logo">Gokul Raj</h2>
 
-    <nav id="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <div id="menu">
-        <i class="fas fa-bars"></i>
-    </div>
+<div id="menu"><i class="fas fa-bars"></i></div>
+<div id="toggle"><i class="fas fa-moon"></i></div>
 </header>
 
-<!-- Hero Section -->
+<!-- HOME -->
 <section id="home" class="home">
-    <div class="content">
-        <h1>Hello, I'm <span>Gokul Raj</span></h1>
-        <p>Front-End Developer</p>
-        <button>Hire Me</button>
-    </div>
+<div class="content">
+<h1>Hello, I'm <span>Gokul Raj</span></h1>
+<h2 id="typing"></h2>
+</div>
 
-    <div class="image">
-        <img src="/gokulraj.jpg" alt="Gokulraj">
-    </div>
+<div class="image">
+<img src="/gokulraj.jpg" alt="my image">
+</div>
 </section>
 
-<!-- About -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        I am a B.Sc Computer Technology graduate passionate about web development.
-        Skilled in HTML, CSS, and JavaScript. I love creating responsive and user-friendly websites.
-    </p>
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>B.Sc Computer Technology graduate passionate about web development. Skilled in HTML, CSS, JavaScript.</p>
 </section>
 
-<!-- Education -->
-<section id="education" class="education">
-    <h2>Education</h2>
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
 
-    <div class="edu-box">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>B.Sc Computer Technology</h3>
-        <p>Kongu Arts and Science College</p>
-    </div>
-
-    <div class="edu-box">
-        <i class="fas fa-school"></i>
-        <h3>HSC</h3>
-        <p>Sengunthar Higher Secondary School</p>
-    </div>
+<div class="skill"><p>HTML</p><div class="bar"><div class="fill html"></div></div></div>
+<div class="skill"><p>CSS</p><div class="bar"><div class="fill css"></div></div></div>
+<div class="skill"><p>JavaScript</p><div class="bar"><div class="fill js"></div></div></div>
 
 </section>
 
-<!-- Contact -->
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p><i class="fas fa-phone"></i> 8072407738</p>
-    <p><i class="fas fa-envelope"></i> gokul@email.com</p>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Petrol Bunk System</h3>
+<p>Billing & stock management system using PHP & MySQL</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Responsive portfolio using HTML CSS JS</p>
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<h3>B.Sc Computer Technology</h3>
+<p>Kongu Arts and Science College</p>
+</div>
+
+<div class="card">
+<h3>HSC</h3>
+<p>Sengunthar Hr Sec School</p>
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<h2>Certifications</h2>
+
+<div class="card">
+<h3>Web Designing Course</h3>
+<p>Accord Info Matrix Institute</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<p><i class="fas fa-phone"></i> 8072407738</p>
+<p><i class="fas fa-envelope"></i> gokul@email.com</p>
 </section>
 
 <script src="script.js"></script>

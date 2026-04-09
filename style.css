@@ -1,116 +1,109 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
 }
 
-body {
-    background: #0f172a;
-    color: white;
+body{
+background:#0f172a;
+color:white;
 }
 
-/* Navbar */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #020617;
+/* Header */
+header{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:#020617;
+align-items:center;
 }
 
-.logo {
-    color: #38bdf8;
+nav a{
+margin:0 10px;
+color:white;
+text-decoration:none;
 }
 
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: white;
+#menu{display:none;cursor:pointer;}
+#toggle{cursor:pointer;}
+
+/* Sections */
+section{
+padding:50px;
+text-align:center;
 }
 
-#menu {
-    display: none;
+.home{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
 }
 
-/* Home */
-.home {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
-    flex-wrap: wrap;
+.home img{
+width:220px;
+border-radius:50%;
+animation:float 3s infinite;
 }
 
-.home .content h1 span {
-    color: #38bdf8;
+@keyframes float{
+50%{transform:translateY(-10px);}
 }
 
-.home img {
-    width: 250px;
-    border-radius: 50%;
-    animation: float 3s ease-in-out infinite;
+/* Cards */
+.card{
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:10px;
+transition:.3s;
 }
 
-@keyframes float {
-    0% {transform: translateY(0);}
-    50% {transform: translateY(-10px);}
-    100% {transform: translateY(0);}
+.card:hover{
+transform:scale(1.05);
 }
 
-/* About */
-.about {
-    padding: 50px;
-    text-align: center;
+/* Skills */
+.bar{
+background:#334155;
+height:10px;
+border-radius:5px;
 }
 
-/* Education */
-.education {
-    padding: 50px;
-    text-align: center;
+.fill{
+height:10px;
+background:#38bdf8;
 }
 
-.edu-box {
-    background: #1e293b;
-    margin: 20px auto;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.edu-box:hover {
-    transform: scale(1.1);
-}
-
-/* Contact */
-.contact {
-    padding: 50px;
-    text-align: center;
-}
+.html{width:90%;}
+.css{width:85%;}
+.js{width:75%;}
 
 /* Responsive */
-@media(max-width:768px) {
+@media(max-width:768px){
 
-    nav {
-        display: none;
-        flex-direction: column;
-        background: #020617;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    #menu {
-        display: block;
-        cursor: pointer;
-    }
-
-    .home {
-        flex-direction: column;
-    }
+nav{
+display:none;
+flex-direction:column;
+position:absolute;
+top:60px;
+right:0;
+background:#020617;
+width:200px;
 }
+
+nav.active{display:flex;}
+
+#menu{display:block;}
+
+.home{flex-direction:column;}
+}
+
+/* Light Mode */
+body.light{
+background:white;
+color:black;
+}
+
+body.light header{background:#ddd;}
+body.light .card{background:#eee;}
