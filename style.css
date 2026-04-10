@@ -220,7 +220,10 @@ header {
     width: 100%;
     height: var(--nav-height);
     background-color: rgba(10, 25, 47, 0.85); /* Adjust via js/css for light Mode */
-    backdrop-filter: blur(12px);
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* ✅ Added this line only */
+
     z-index: 100;
     transition: var(--transition-base), background-color var(--transition-base);
 }
