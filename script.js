@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Theme Toggle ---
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn.querySelector('i');
-    
+
     // Check for saved user preference, if any, on load of the website
     const currentTheme = localStorage.getItem('theme-preference') || 'dark';
-    
+
     if (currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         themeIcon.classList.replace('fa-moon', 'fa-sun');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggleBtn.addEventListener('click', () => {
         const theme = document.documentElement.getAttribute('data-theme');
-        
+
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             themeIcon.classList.replace('fa-moon', 'fa-sun');
@@ -84,13 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Intersection Observer for Scroll Animations ---
     const faders = document.querySelectorAll('.fade-in-section');
-    
+
     const appearOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
@@ -110,32 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
-    if(contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get button to add loading state
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
-            submitBtn.disabled = true;
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-            // Simulate form submission delay
-            setTimeout(() => {
-                formMessage.innerText = 'Thank you! Your message has been sent.';
-                formMessage.style.color = 'var(--primary-color)';
+        emailjs.sendForm('service_20x7as3', 'template_redpk1h', this)
+            .then(() => {
+                formMessage.innerText = "✅ Message sent successfully!";
+                formMessage.style.color = "green";
                 contactForm.reset();
-                
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
+            }, (error) => {
+                formMessage.innerText = "❌ Failed to send message!";
+                formMessage.style.color = "red";
+            });
+    });
 
-                // Clear message after 5 seconds
-                setTimeout(() => {
-                    formMessage.innerText = '';
-                }, 5000);
-            }, 1000);
-        });
-    }
+}
 
-});
+);

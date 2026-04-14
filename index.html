@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gokul Raj | Premium Portfolio</title>
-    
+
     <!-- Meta Descriptions for SEO -->
-    <meta name="description" content="Professional portfolio of Gokul Raj. View my projects, skills, education, and get in touch.">
-    
+    <meta name="description"
+        content="Professional portfolio of Gokul Raj. View my projects, skills, education, and get in touch.">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("ghl-84IRxVIPAxDM0");
+        })();
+    </script>
 </head>
 
 <body>
@@ -57,7 +68,9 @@
                 <h1 class="hero-title typing-effect">Gokul Raj.</h1>
                 <h2 class="hero-subtitle">I build things for the web.</h2>
                 <p class="hero-description">
-                    I'm a passionate software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.
+                    I'm a passionate software developer specializing in building (and occasionally designing)
+                    exceptional digital experiences. Currently, I'm focused on building accessible, human-centered
+                    products.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-outline">Get in touch</a>
@@ -79,8 +92,12 @@
             <h2 class="section-title"><span>01.</span> About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Hello! My name is Gokul and I enjoy creating things that live on the internet. My interest in web development started back when I decided to try editing custom themes, which turned out to be the perfect introduction to HTML & CSS!</p>
-                    <p>Fast-forward to today, and I've had the privilege of building diverse software architectures and beautiful interfaces. My main focus these days is building accessible, inclusive products and digital experiences.</p>
+                    <p>Hello! My name is Gokul and I enjoy creating things that live on the internet. My interest in web
+                        development started back when I decided to try editing custom themes, which turned out to be the
+                        perfect introduction to HTML & CSS!</p>
+                    <p>Fast-forward to today, and I've had the privilege of building diverse software architectures and
+                        beautiful interfaces. My main focus these days is building accessible, inclusive products and
+                        digital experiences.</p>
                     <p>Here are a few technologies I've been working with recently:</p>
                     <ul class="tech-list">
                         <li><i class="fa-solid fa-angle-right"></i> JavaScript</li>
@@ -89,7 +106,8 @@
                     </ul>
                 </div>
                 <div class="about-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coding Environment" class="about-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Coding Environment" class="about-image">
                 </div>
             </div>
         </div>
@@ -177,18 +195,20 @@
                 <strong>Phone:</strong> 8072407738<br>
                 <strong>Email:</strong> gokulrajsiva44@gmail.com
             </p>
-            
+
             <form class="contact-form" id="contact-form">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" name="user_name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="email" name="user_email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary form-submit">Say Hello <i class="fa-regular fa-paper-plane"></i></button>
+                <button type="submit" class="btn btn-primary form-submit">
+                    Say Hello <i class="fa-regular fa-paper-plane"></i>
+                </button>
                 <div class="form-message" id="form-message"></div>
             </form>
         </div>
@@ -199,8 +219,10 @@
         <div class="container footer-content">
             <div class="social-links">
                 <a href="https://github.com/Gokulraj177" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/gokul-raj-s-856b0727b?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/gokul_raj_siva_07?igsh=MXM5YTV0dHhieWdhZg==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/gokul-raj-s-856b0727b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/gokul_raj_siva_07?igsh=MXM5YTV0dHhieWdhZg=="
+                    aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">
                 <a href="#">Designed & Built by Gokul Raj</a>
@@ -214,4 +236,5 @@
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
